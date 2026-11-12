@@ -1,0 +1,74 @@
+/* ───────────── System icon (water drop) ─────────────
+   Added on top of hr.css — nothing in hr.css was removed. */
+.hr-sidebar .brand-icon{
+  font-size:0;color:transparent;
+  background:#fff url("/img/aquapiol-icon-192.png") center/64% no-repeat;
+  box-shadow:0 6px 16px rgba(34,196,214,.28);
+}
+.welcome-card .welcome-mark{
+  font-size:0;color:transparent;width:150px;height:150px;flex-shrink:0;
+  background:url("/img/aquapiol-icon-512.png") center/contain no-repeat;opacity:.18;margin-right:18px;padding:0;
+}
+
+/* ───────────── Sign-out button in sidebar ───────────── */
+.signout-form{margin:14px 0 0}
+.nav-item.signout{width:100%;text-align:left;background:transparent;cursor:pointer;font-family:inherit;font-size:13px;line-height:inherit;color:#c5d5e9}
+.nav-item.signout:hover{background:#3a2a45;border-color:#6d3d5c;box-shadow:inset 3px 0 #ff6b81;color:#fff}
+
+/* ───────────── Login page ───────────── */
+.auth-body{margin:0;min-height:100vh;background:#f4f6fa;color:#18243a;font-family:Inter,"Segoe UI",Arial,sans-serif;font-size:14px}
+.auth-body *,.auth-body *::before,.auth-body *::after{box-sizing:border-box}
+.auth-shell{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);min-height:100vh}
+
+.auth-hero{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:38px 56px;color:#fff;
+  background:linear-gradient(160deg,#101a2e 0%,#183c69 58%,#17618a 100%)}
+.auth-brand{display:flex;align-items:center;gap:13px;color:#fff;text-decoration:none;position:relative;z-index:1}
+.auth-brand b{display:block;font-size:20px;font-weight:800;letter-spacing:-.2px}
+.auth-brand small{display:block;margin-top:4px;font-size:11px;color:#8faed4}
+.auth-logo{width:48px;height:48px;border-radius:14px;background:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(34,196,214,.3);flex-shrink:0}
+.auth-logo img{width:30px;height:30px;display:block;object-fit:contain}
+
+.auth-hero-copy{position:relative;z-index:1;max-width:520px}
+.auth-hero-copy .pill{display:inline-block;background:#ffffff18;border:1px solid #ffffff25;padding:7px 13px;border-radius:30px;font-size:10px;letter-spacing:1.5px;font-weight:800;color:#b5e8f5}
+.auth-hero-copy h1{margin:20px 0 14px;font-size:42px;line-height:1.1;letter-spacing:-1.2px;font-weight:800;color:#fff}
+.auth-hero-copy p{margin:0;color:#b8cde4;font-size:15px;line-height:1.65}
+.auth-features{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:13px}
+.auth-features li{display:flex;align-items:center;gap:12px;color:#d7e4f5;font-size:14px}
+.auth-features i{width:9px;height:9px;border-radius:50%;background:#22c4d6;box-shadow:0 0 0 4px #22c4d62b;flex-shrink:0}
+.auth-hero-foot{position:relative;z-index:1;margin:0;font-size:12px;color:#7ca6ce}
+.auth-watermark{position:absolute;right:-90px;bottom:-70px;width:420px;height:420px;pointer-events:none;
+  background:url("/img/aquapiol-icon-512.png") center/contain no-repeat;opacity:.11}
+
+.auth-panel{display:flex;align-items:center;justify-content:center;padding:40px 24px}
+.auth-card{width:100%;max-width:420px;background:#fff;border:1px solid #e9eef5;border-radius:18px;padding:38px 36px;box-shadow:0 18px 50px rgba(22,43,69,.09)}
+.auth-brand-mobile{display:none;color:#18243a;margin-bottom:26px}
+.auth-brand-mobile small{color:#8a96a8}
+.auth-title{margin:0;font-size:30px;letter-spacing:-.8px;font-weight:800;color:#18243a}
+.auth-sub{margin:8px 0 22px;color:#8a96a8;line-height:1.5}
+.auth-card .eyebrow{margin:0 0 10px;font-size:10px;letter-spacing:2.5px;color:#2475ba;font-weight:900}
+
+.auth-form{display:grid;gap:18px;margin-top:6px}
+.auth-card .field{display:flex;flex-direction:column;gap:8px;color:#647187;font-size:12px;font-weight:650}
+.input-icon{position:relative;display:block}
+.input-icon>svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#8a98ad;pointer-events:none}
+.input-icon input{width:100%;padding:13px 44px 13px 42px;border:1px solid #e0e7f0;border-radius:10px;background:#fff;color:#29374e;font:inherit;font-size:14px;font-weight:400;outline:none;transition:border-color .15s,box-shadow .15s}
+.input-icon input::placeholder{color:#a9b3c3}
+.input-icon input:focus{border-color:#43a4d1;box-shadow:0 0 0 3px #21a6d01f}
+.pw-toggle{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;border-radius:8px;background:transparent;color:#8a98ad;cursor:pointer;display:grid;place-items:center}
+.pw-toggle:hover{background:#f1f5fa;color:#2475ba}
+.pw-toggle.on{color:#2475ba}
+.auth-submit{width:100%;padding:14px 17px;font-size:14px;border:0;margin-top:4px}
+.auth-note{margin:22px 0 0;text-align:center;font-size:12px;color:#9aa5b5;line-height:1.5}
+.auth-card .alert{margin:0 0 16px}
+
+@media(max-width:900px){
+  .auth-shell{grid-template-columns:1fr}
+  .auth-hero{display:none}
+  .auth-brand-mobile{display:flex}
+  .auth-panel{align-items:flex-start;padding:28px 16px}
+  .auth-card{padding:30px 22px}
+}
+@media(max-width:700px){
+  .signout-form{display:inline-block;margin:0}
+  .hr-sidebar .nav-item.signout{width:auto;display:inline-block;padding:9px;font-size:11px}
+}

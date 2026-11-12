@@ -1,0 +1,53 @@
+{{> head}}
+<body class="auth-body">
+<main class="auth-body">
+
+  
+
+    
+  </section>
+
+  <section class="auth-panel">
+    <div class="auth-card">
+      <a class="auth-brand auth-brand-mobile" href="/login">
+        <span class="auth-logo"><img src="/img/aquapiol-icon-192.png" alt="System logo"></span>
+        <span><b>AquaPiol</b><small>HR Management System</small></span>
+      </a>
+
+      <p class="eyebrow">AquaPiol</p>
+      <h2 class="auth-title">Sign in</h2>
+      <p class="muted auth-sub">Enter your account details to open the HR dashboard.</p>
+
+      {{#if loggedOut}}<div class="alert success">You have been signed out.</div>{{/if}}
+      {{#if success_msg}}<div class="alert success">{{success_msg}}</div>{{/if}}
+      {{#if error_msg}}<div class="alert error" role="alert">{{error_msg}}</div>{{/if}}
+
+      <form method="POST" action="/login" class="auth-form" autocomplete="on">
+        <label class="field">Email address
+          <span class="input-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <input type="email" name="email" value="{{email}}" placeholder="you@example.com" required autofocus autocomplete="username">
+          </span>
+        </label>
+
+        <label class="field">Password
+          <span class="input-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <input type="password" name="password" id="loginPassword" placeholder="Enter your password" required autocomplete="current-password">
+            <button type="button" class="pw-toggle" id="pwToggle" aria-label="Show password" title="Show / hide password">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </span>
+        </label>
+
+        <button type="submit" class="btn-primary auth-submit">Sign in</button>
+      </form>
+
+      <p class="auth-note">Authorized HR personnel only. Contact your administrator if you need an account.</p>
+    </div>
+  </section>
+
+</main>
+<script src="/js/auth.js"></script>
+</body>
+</html>

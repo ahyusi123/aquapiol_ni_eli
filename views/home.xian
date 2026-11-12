@@ -1,0 +1,4 @@
+{{> head }}
+<script>window.location.replace('/hr');</script>
+<body class="bg-slate-100"><div class="p-8">Opening HR dashboard… <a href="/hr">Click here</a></div></body>
+{{> footer }}
